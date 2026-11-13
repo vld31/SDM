@@ -1,0 +1,8 @@
+firmware/build/
+target_demo/build/
+tools/**/__pycache__/
+*.ubb
+*_decoded/
+captures/
+*.elf
+capture_*/

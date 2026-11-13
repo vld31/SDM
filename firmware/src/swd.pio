@@ -1,0 +1,69 @@
+; Universal Black Box - SWD bit engine
+;
+; Command-driven SWD shifter in the style of Raspberry Pi's debugprobe
+; (probe.pio, MIT).  Every TX FIFO word is either a command or data.
+;
+;   command word (OSR shifts right, so low bits come out first):
+;     bits  [7:0]  = bit count - 1
+;     bit   [8]    = SWDIO direction (1 = probe drives the line)
+;     bits [13:9]  = program counter to jump to (write_bits / read_bits)
+;
+;   write_bits : the next TX word holds the data, LSB first
+;   read_bits  : one RX word is pushed with the sampled bits in its
+;                top `count` bits (shift right); caller shifts down
+;
+; SWCLK is the side-set pin, SWDIO is the single OUT/IN/SET pin.
+; One SWCLK period is 4 PIO cycles.
+
+.program swd
+.side_set 1 opt
+
+public write_bits:
+    pull
+write_loop:
+    out pins, 1             [1]  side 0   ; probe outputs data on the falling edge
+    jmp x-- write_loop      [1]  side 1   ; target samples on the rising edge
+
+.wrap_target
+public next_cmd:
+    pull                         side 0   ; SWCLK rests low between commands
+    out x, 8                              ; bit count - 1
+    out pindirs, 1                        ; SWDIO direction
+    out pc, 5                             ; jump to the routine
+
+read_loop:
+    nop                                   ; keeps the loop at 4 cycles/bit
+public read_bits:
+    in pins, 1              [1]  side 1   ; probe samples on the rising edge
+    jmp x-- read_loop            side 0
+    push
+.wrap
+
+% c-sdk {
+#include "hardware/clocks.h"
+#include "hardware/gpio.h"
+
+static inline void swd_program_init(PIO pio, uint sm, uint offset, uint pin_swclk, uint pin_swdio, float swclk_hz)
+{
+    pio_sm_config c = swd_program_get_default_config(offset);
+    sm_config_set_out_pins(&c, pin_swdio, 1);
+    sm_config_set_set_pins(&c, pin_swdio, 1);
+    sm_config_set_in_pins(&c, pin_swdio);
+    sm_config_set_sideset_pins(&c, pin_swclk);
+    // Right shifts: command fields and data come out LSB first, read bits land in the top of the ISR.
+    sm_config_set_out_shift(&c, true, false, 0);
+    sm_config_set_in_shift(&c, true, false, 0);
+    float div = (float)clock_get_hz(clk_sys) / (4.0f * swclk_hz);
+    if (div < 1.0f) div = 1.0f;
+    sm_config_set_clkdiv(&c, div);
+
+    pio_gpio_init(pio, pin_swclk);
+    pio_gpio_init(pio, pin_swdio);
+    gpio_pull_up(pin_swdio);
+    pio_sm_set_pins_with_mask(pio, sm, 0, (1u << pin_swclk) | (1u << pin_swdio));
+    pio_sm_set_pindirs_with_mask(pio, sm, (1u << pin_swclk), (1u << pin_swclk) | (1u << pin_swdio));
+
+    pio_sm_init(pio, sm, offset + swd_offset_next_cmd, &c);
+    pio_sm_set_enabled(pio, sm, true);
+}
+%}

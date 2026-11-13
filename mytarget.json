@@ -1,0 +1,1940 @@
+{
+ "version": 2,
+ "manifest_hash": 420395647,
+ "elf": "E:\\Downloads\\SDM\\firmware.elf",
+ "elf_hash": 516295768,
+ "build_id": null,
+ "target": "rp2040",
+ "svd": "C:\\Users\\Vlad\\.pico-sdk\\sdk\\2.3.1\\src\\rp2040\\hardware_regs\\RP2040.svd",
+ "level": 1,
+ "on_fault": "resume",
+ "pc_sampling": 10,
+ "swd_hz": 4000000,
+ "fast_us": 2000,
+ "slow_us": 10000,
+ "keyframe_us": 1000000,
+ "entries": [
+  {
+   "name": "player.tick",
+   "addr": 536874160,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint32_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "player.song_ms",
+   "addr": 536874164,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint32_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "player.note_idx",
+   "addr": 536874168,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint32_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "player.beat_idx",
+   "addr": 536874172,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint32_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "player.beat_ms[0]",
+   "addr": 536874176,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint32_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "player.beat_ms[1]",
+   "addr": 536874180,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint32_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "player.beat_ms[2]",
+   "addr": 536874184,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint32_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "player.beat_ms[3]",
+   "addr": 536874188,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint32_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "player.beat_ms[4]",
+   "addr": 536874192,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint32_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "player.beat_ms[5]",
+   "addr": 536874196,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint32_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "player.beat_ms[6]",
+   "addr": 536874200,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint32_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "player.beat_ms[7]",
+   "addr": 536874204,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint32_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "player.on_beat",
+   "addr": 536874208,
+   "size": 4,
+   "kind": "pointer",
+   "ctype": "beat_cb_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "player.state",
+   "addr": 536874212,
+   "size": 1,
+   "kind": "enum",
+   "ctype": "PlayerState",
+   "enum": {
+    "0": "ST_IDLE",
+    "1": "ST_PLAYING",
+    "2": "ST_PAUSED"
+   },
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "led_off_at",
+   "addr": 536877008,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint32_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "ticks_left",
+   "addr": 536877012,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint32_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "next_draw_at",
+   "addr": 536877028,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint32_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "next_tick_at",
+   "addr": 536877032,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint32_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "song_eighths",
+   "addr": 536877036,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint32_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "sound_off_at",
+   "addr": 536877040,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint32_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "buz_chan",
+   "addr": 536877060,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "buz_slice",
+   "addr": 536877072,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "g_beats",
+   "addr": 536878216,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint32_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "g_loop_count",
+   "addr": 536878220,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint32_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "g_sys_clk_hz",
+   "addr": 536878224,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint32_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "g_freq_hz",
+   "addr": 536879950,
+   "size": 2,
+   "kind": "uint",
+   "ctype": "uint16_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "g_pot_raw",
+   "addr": 536879952,
+   "size": 2,
+   "kind": "uint",
+   "ctype": "uint16_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "sound_on",
+   "addr": 536879986,
+   "size": 1,
+   "kind": "bool",
+   "ctype": "bool",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "was_down",
+   "addr": 536879987,
+   "size": 1,
+   "kind": "bool",
+   "ctype": "bool",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "g_button_down",
+   "addr": 536880302,
+   "size": 1,
+   "kind": "char",
+   "ctype": "uint8_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "g_oled_ok",
+   "addr": 536880303,
+   "size": 1,
+   "kind": "char",
+   "ctype": "uint8_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "g_volume_pct",
+   "addr": 536880304,
+   "size": 1,
+   "kind": "char",
+   "ctype": "uint8_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "g_crash_magic",
+   "addr": 536883200,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint32_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "g_crash_count",
+   "addr": 536883204,
+   "size": 4,
+   "kind": "uint",
+   "ctype": "uint32_t",
+   "enum": {},
+   "bit_offset": null,
+   "bit_size": null,
+   "cls": "fast"
+  },
+  {
+   "name": "RESETS.RESET_DONE",
+   "addr": 1073790984,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "USBCTRL",
+     "bit_offset": 24,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "UART1",
+     "bit_offset": 23,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "UART0",
+     "bit_offset": 22,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "TIMER",
+     "bit_offset": 21,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "TBMAN",
+     "bit_offset": 20,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "SYSINFO",
+     "bit_offset": 19,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "SYSCFG",
+     "bit_offset": 18,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "SPI1",
+     "bit_offset": 17,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "SPI0",
+     "bit_offset": 16,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "RTC",
+     "bit_offset": 15,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PWM",
+     "bit_offset": 14,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PLL_USB",
+     "bit_offset": 13,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PLL_SYS",
+     "bit_offset": 12,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PIO1",
+     "bit_offset": 11,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PIO0",
+     "bit_offset": 10,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PADS_QSPI",
+     "bit_offset": 9,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PADS_BANK0",
+     "bit_offset": 8,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "JTAG",
+     "bit_offset": 7,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "IO_QSPI",
+     "bit_offset": 6,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "IO_BANK0",
+     "bit_offset": 5,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "I2C1",
+     "bit_offset": 4,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "I2C0",
+     "bit_offset": 3,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "DMA",
+     "bit_offset": 2,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "BUSCTRL",
+     "bit_offset": 1,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "ADC",
+     "bit_offset": 0,
+     "bit_width": 1,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "UART0.UARTFR",
+   "addr": 1073954840,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "RI",
+     "bit_offset": 8,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "TXFE",
+     "bit_offset": 7,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "RXFF",
+     "bit_offset": 6,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "TXFF",
+     "bit_offset": 5,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "RXFE",
+     "bit_offset": 4,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "BUSY",
+     "bit_offset": 3,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "DCD",
+     "bit_offset": 2,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "DSR",
+     "bit_offset": 1,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "CTS",
+     "bit_offset": 0,
+     "bit_width": 1,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "UART0.UARTIBRD",
+   "addr": 1073954852,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "BAUD_DIVINT",
+     "bit_offset": 0,
+     "bit_width": 16,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "UART0.UARTFBRD",
+   "addr": 1073954856,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "BAUD_DIVFRAC",
+     "bit_offset": 0,
+     "bit_width": 6,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "UART0.UARTLCR_H",
+   "addr": 1073954860,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "SPS",
+     "bit_offset": 7,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "WLEN",
+     "bit_offset": 5,
+     "bit_width": 2,
+     "enum": {}
+    },
+    {
+     "name": "FEN",
+     "bit_offset": 4,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "STP2",
+     "bit_offset": 3,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "EPS",
+     "bit_offset": 2,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PEN",
+     "bit_offset": 1,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "BRK",
+     "bit_offset": 0,
+     "bit_width": 1,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "UART0.UARTCR",
+   "addr": 1073954864,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "CTSEN",
+     "bit_offset": 15,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "RTSEN",
+     "bit_offset": 14,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "OUT2",
+     "bit_offset": 13,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "OUT1",
+     "bit_offset": 12,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "RTS",
+     "bit_offset": 11,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "DTR",
+     "bit_offset": 10,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "RXE",
+     "bit_offset": 9,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "TXE",
+     "bit_offset": 8,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "LBE",
+     "bit_offset": 7,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "SIRLP",
+     "bit_offset": 2,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "SIREN",
+     "bit_offset": 1,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "UARTEN",
+     "bit_offset": 0,
+     "bit_width": 1,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "UART1.UARTFR",
+   "addr": 1073971224,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "RI",
+     "bit_offset": 8,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "TXFE",
+     "bit_offset": 7,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "RXFF",
+     "bit_offset": 6,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "TXFF",
+     "bit_offset": 5,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "RXFE",
+     "bit_offset": 4,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "BUSY",
+     "bit_offset": 3,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "DCD",
+     "bit_offset": 2,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "DSR",
+     "bit_offset": 1,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "CTS",
+     "bit_offset": 0,
+     "bit_width": 1,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "UART1.UARTCR",
+   "addr": 1073971248,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "CTSEN",
+     "bit_offset": 15,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "RTSEN",
+     "bit_offset": 14,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "OUT2",
+     "bit_offset": 13,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "OUT1",
+     "bit_offset": 12,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "RTS",
+     "bit_offset": 11,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "DTR",
+     "bit_offset": 10,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "RXE",
+     "bit_offset": 9,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "TXE",
+     "bit_offset": 8,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "LBE",
+     "bit_offset": 7,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "SIRLP",
+     "bit_offset": 2,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "SIREN",
+     "bit_offset": 1,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "UARTEN",
+     "bit_offset": 0,
+     "bit_width": 1,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "ADC.CS",
+   "addr": 1074053120,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "RROBIN",
+     "bit_offset": 16,
+     "bit_width": 5,
+     "enum": {}
+    },
+    {
+     "name": "AINSEL",
+     "bit_offset": 12,
+     "bit_width": 3,
+     "enum": {}
+    },
+    {
+     "name": "ERR_STICKY",
+     "bit_offset": 10,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "ERR",
+     "bit_offset": 9,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "READY",
+     "bit_offset": 8,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "START_MANY",
+     "bit_offset": 3,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "START_ONCE",
+     "bit_offset": 2,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "TS_EN",
+     "bit_offset": 1,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "EN",
+     "bit_offset": 0,
+     "bit_width": 1,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "ADC.RESULT",
+   "addr": 1074053124,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "RESULT",
+     "bit_offset": 0,
+     "bit_width": 12,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH0_CSR",
+   "addr": 1074069504,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "PH_ADV",
+     "bit_offset": 7,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PH_RET",
+     "bit_offset": 6,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "DIVMODE",
+     "bit_offset": 4,
+     "bit_width": 2,
+     "enum": {
+      "0": "div",
+      "1": "level",
+      "2": "rise",
+      "3": "fall"
+     }
+    },
+    {
+     "name": "B_INV",
+     "bit_offset": 3,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "A_INV",
+     "bit_offset": 2,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PH_CORRECT",
+     "bit_offset": 1,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "EN",
+     "bit_offset": 0,
+     "bit_width": 1,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH0_CC",
+   "addr": 1074069516,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "B",
+     "bit_offset": 16,
+     "bit_width": 16,
+     "enum": {}
+    },
+    {
+     "name": "A",
+     "bit_offset": 0,
+     "bit_width": 16,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH0_TOP",
+   "addr": 1074069520,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "CH0_TOP",
+     "bit_offset": 0,
+     "bit_width": 16,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH1_CSR",
+   "addr": 1074069524,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "PH_ADV",
+     "bit_offset": 7,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PH_RET",
+     "bit_offset": 6,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "DIVMODE",
+     "bit_offset": 4,
+     "bit_width": 2,
+     "enum": {
+      "0": "div",
+      "1": "level",
+      "2": "rise",
+      "3": "fall"
+     }
+    },
+    {
+     "name": "B_INV",
+     "bit_offset": 3,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "A_INV",
+     "bit_offset": 2,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PH_CORRECT",
+     "bit_offset": 1,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "EN",
+     "bit_offset": 0,
+     "bit_width": 1,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH1_CC",
+   "addr": 1074069536,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "B",
+     "bit_offset": 16,
+     "bit_width": 16,
+     "enum": {}
+    },
+    {
+     "name": "A",
+     "bit_offset": 0,
+     "bit_width": 16,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH1_TOP",
+   "addr": 1074069540,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "CH1_TOP",
+     "bit_offset": 0,
+     "bit_width": 16,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH2_CSR",
+   "addr": 1074069544,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "PH_ADV",
+     "bit_offset": 7,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PH_RET",
+     "bit_offset": 6,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "DIVMODE",
+     "bit_offset": 4,
+     "bit_width": 2,
+     "enum": {
+      "0": "div",
+      "1": "level",
+      "2": "rise",
+      "3": "fall"
+     }
+    },
+    {
+     "name": "B_INV",
+     "bit_offset": 3,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "A_INV",
+     "bit_offset": 2,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PH_CORRECT",
+     "bit_offset": 1,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "EN",
+     "bit_offset": 0,
+     "bit_width": 1,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH2_CC",
+   "addr": 1074069556,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "B",
+     "bit_offset": 16,
+     "bit_width": 16,
+     "enum": {}
+    },
+    {
+     "name": "A",
+     "bit_offset": 0,
+     "bit_width": 16,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH2_TOP",
+   "addr": 1074069560,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "CH2_TOP",
+     "bit_offset": 0,
+     "bit_width": 16,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH3_CSR",
+   "addr": 1074069564,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "PH_ADV",
+     "bit_offset": 7,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PH_RET",
+     "bit_offset": 6,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "DIVMODE",
+     "bit_offset": 4,
+     "bit_width": 2,
+     "enum": {
+      "0": "div",
+      "1": "level",
+      "2": "rise",
+      "3": "fall"
+     }
+    },
+    {
+     "name": "B_INV",
+     "bit_offset": 3,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "A_INV",
+     "bit_offset": 2,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PH_CORRECT",
+     "bit_offset": 1,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "EN",
+     "bit_offset": 0,
+     "bit_width": 1,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH3_CC",
+   "addr": 1074069576,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "B",
+     "bit_offset": 16,
+     "bit_width": 16,
+     "enum": {}
+    },
+    {
+     "name": "A",
+     "bit_offset": 0,
+     "bit_width": 16,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH3_TOP",
+   "addr": 1074069580,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "CH3_TOP",
+     "bit_offset": 0,
+     "bit_width": 16,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH4_CSR",
+   "addr": 1074069584,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "PH_ADV",
+     "bit_offset": 7,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PH_RET",
+     "bit_offset": 6,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "DIVMODE",
+     "bit_offset": 4,
+     "bit_width": 2,
+     "enum": {
+      "0": "div",
+      "1": "level",
+      "2": "rise",
+      "3": "fall"
+     }
+    },
+    {
+     "name": "B_INV",
+     "bit_offset": 3,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "A_INV",
+     "bit_offset": 2,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PH_CORRECT",
+     "bit_offset": 1,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "EN",
+     "bit_offset": 0,
+     "bit_width": 1,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH4_CC",
+   "addr": 1074069596,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "B",
+     "bit_offset": 16,
+     "bit_width": 16,
+     "enum": {}
+    },
+    {
+     "name": "A",
+     "bit_offset": 0,
+     "bit_width": 16,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH4_TOP",
+   "addr": 1074069600,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "CH4_TOP",
+     "bit_offset": 0,
+     "bit_width": 16,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH5_CSR",
+   "addr": 1074069604,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "PH_ADV",
+     "bit_offset": 7,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PH_RET",
+     "bit_offset": 6,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "DIVMODE",
+     "bit_offset": 4,
+     "bit_width": 2,
+     "enum": {
+      "0": "div",
+      "1": "level",
+      "2": "rise",
+      "3": "fall"
+     }
+    },
+    {
+     "name": "B_INV",
+     "bit_offset": 3,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "A_INV",
+     "bit_offset": 2,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PH_CORRECT",
+     "bit_offset": 1,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "EN",
+     "bit_offset": 0,
+     "bit_width": 1,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH5_CC",
+   "addr": 1074069616,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "B",
+     "bit_offset": 16,
+     "bit_width": 16,
+     "enum": {}
+    },
+    {
+     "name": "A",
+     "bit_offset": 0,
+     "bit_width": 16,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH5_TOP",
+   "addr": 1074069620,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "CH5_TOP",
+     "bit_offset": 0,
+     "bit_width": 16,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH6_CSR",
+   "addr": 1074069624,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "PH_ADV",
+     "bit_offset": 7,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PH_RET",
+     "bit_offset": 6,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "DIVMODE",
+     "bit_offset": 4,
+     "bit_width": 2,
+     "enum": {
+      "0": "div",
+      "1": "level",
+      "2": "rise",
+      "3": "fall"
+     }
+    },
+    {
+     "name": "B_INV",
+     "bit_offset": 3,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "A_INV",
+     "bit_offset": 2,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PH_CORRECT",
+     "bit_offset": 1,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "EN",
+     "bit_offset": 0,
+     "bit_width": 1,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH6_CC",
+   "addr": 1074069636,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "B",
+     "bit_offset": 16,
+     "bit_width": 16,
+     "enum": {}
+    },
+    {
+     "name": "A",
+     "bit_offset": 0,
+     "bit_width": 16,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH6_TOP",
+   "addr": 1074069640,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "CH6_TOP",
+     "bit_offset": 0,
+     "bit_width": 16,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH7_CSR",
+   "addr": 1074069644,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "PH_ADV",
+     "bit_offset": 7,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PH_RET",
+     "bit_offset": 6,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "DIVMODE",
+     "bit_offset": 4,
+     "bit_width": 2,
+     "enum": {
+      "0": "div",
+      "1": "level",
+      "2": "rise",
+      "3": "fall"
+     }
+    },
+    {
+     "name": "B_INV",
+     "bit_offset": 3,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "A_INV",
+     "bit_offset": 2,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PH_CORRECT",
+     "bit_offset": 1,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "EN",
+     "bit_offset": 0,
+     "bit_width": 1,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH7_CC",
+   "addr": 1074069656,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "B",
+     "bit_offset": 16,
+     "bit_width": 16,
+     "enum": {}
+    },
+    {
+     "name": "A",
+     "bit_offset": 0,
+     "bit_width": 16,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "PWM.CH7_TOP",
+   "addr": 1074069660,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "CH7_TOP",
+     "bit_offset": 0,
+     "bit_width": 16,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "WATCHDOG.CTRL",
+   "addr": 1074102272,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "TRIGGER",
+     "bit_offset": 31,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "ENABLE",
+     "bit_offset": 30,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PAUSE_DBG1",
+     "bit_offset": 26,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PAUSE_DBG0",
+     "bit_offset": 25,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "PAUSE_JTAG",
+     "bit_offset": 24,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "TIME",
+     "bit_offset": 0,
+     "bit_width": 24,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "WATCHDOG.REASON",
+   "addr": 1074102280,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "FORCE",
+     "bit_offset": 1,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "TIMER",
+     "bit_offset": 0,
+     "bit_width": 1,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "VREG_AND_CHIP_RESET.CHIP_RESET",
+   "addr": 1074151432,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "PSM_RESTART_FLAG",
+     "bit_offset": 24,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "HAD_PSM_RESTART",
+     "bit_offset": 20,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "HAD_RUN",
+     "bit_offset": 16,
+     "bit_width": 1,
+     "enum": {}
+    },
+    {
+     "name": "HAD_POR",
+     "bit_offset": 8,
+     "bit_width": 1,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "SIO.GPIO_IN",
+   "addr": 3489660932,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "GPIO_IN",
+     "bit_offset": 0,
+     "bit_width": 30,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "SIO.GPIO_OUT",
+   "addr": 3489660944,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "GPIO_OUT",
+     "bit_offset": 0,
+     "bit_width": 30,
+     "enum": {}
+    }
+   ]
+  },
+  {
+   "name": "SIO.GPIO_OE",
+   "addr": 3489660960,
+   "size": 4,
+   "kind": "reg",
+   "ctype": "register",
+   "cls": "slow",
+   "fields": [
+    {
+     "name": "GPIO_OE",
+     "bit_offset": 0,
+     "bit_width": 30,
+     "enum": {}
+    }
+   ]
+  }
+ ],
+ "regions": [
+  {
+   "addr": 536870912,
+   "len": 9404,
+   "name": ".ram_vector_table+.data+.bss"
+  },
+  {
+   "addr": 536883200,
+   "len": 8,
+   "name": ".uninitialized_data"
+  },
+  {
+   "addr": 537133056,
+   "len": 8192,
+   "name": "stack"
+  }
+ ],
+ "triggers": []
+}
